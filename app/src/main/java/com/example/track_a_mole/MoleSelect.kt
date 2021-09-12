@@ -131,9 +131,6 @@ class MoleSelect : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 //        // Set Adapter to Spinner
         nameSelect.adapter = aa
 
-//        ArrayAdapter.createFromResource(this, names, android.R.layout.simple_spinner_item).also{
-//            adapter -> adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
-//            nameSelect.adapter = adapter
         }
 
 

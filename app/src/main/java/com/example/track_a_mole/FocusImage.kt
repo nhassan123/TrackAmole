@@ -44,11 +44,8 @@ class FocusImage : AppCompatActivity() {
         val evolText = findViewById<TextView>(R.id.evolveResponse)
         val locText = findViewById<TextView>(R.id.locationResponse)
 
-        //val add_comment_btn = findViewById<Button>(R.id.add_comment)
         val del = findViewById<ImageButton>(R.id.delete)
 
-        //addCommentField = findViewById(R.id.add_comment_text)
-        //commentsShown = findViewById(R.id.comments)
 
         val extras: Bundle? = intent.extras
         if (extras != null) {
@@ -91,19 +88,6 @@ class FocusImage : AppCompatActivity() {
                     var evolve = img_info["evolve"] as String
                     var location = img_info["location"] as String
 
-
-//                    if (img_info[""] != null) {
-//                        imgCaption = img_info["border"] as String
-//                    }
-//                    comments = ""
-//                    if (img_info["comments"] != null) {
-//                        comments = img_info["comments"] as String
-//                        commentsShown.setText(
-//                            comments,
-//                            TextView.BufferType.EDITABLE
-//                        )
-//                    }
-
                     val storageRef = storage.reference
                     val sr = img_info["storageRef"] as String
                     pathRef = storageRef.child(sr)
@@ -142,41 +126,9 @@ class FocusImage : AppCompatActivity() {
             errorExit()
         }
 
-        //val btn = findViewById<Button>(R.id.back)
-        //btn.setOnClickListener { onBackPressed() }
-
-        //add_comment_btn.setOnClickListener { onAddComment() }
-        del.setOnClickListener { onDeleteCalled() }
+            del.setOnClickListener { onDeleteCalled() }
     }
 
-    private fun onAddComment() {
-        // Not a great way to do comments, but this was very fast...
-        val additionalComment = addCommentField.text.toString()
-        if (comments == "") {
-            comments = "$username: $additionalComment"
-            commentsShown.setText(
-                comments,
-                TextView.BufferType.EDITABLE
-            )
-        } else {
-            comments = "$comments\n$username: $additionalComment"
-            commentsShown.setText(
-                comments,
-                TextView.BufferType.EDITABLE
-            )
-        }
-
-
-        addCommentField.setText("", TextView.BufferType.EDITABLE)
-        addCommentField.isEnabled = false
-        addCommentField.isEnabled = true
-
-        imageData.update("comments", comments)
-            .addOnSuccessListener {
-                Toast.makeText(this, "Comment Posted!", Toast.LENGTH_SHORT).show()
-                Log.d("ZOOM", "Comment update success") }
-            .addOnFailureListener { e -> Log.w("ZOOM", "Error updating document", e) }
-    }
 
     private fun onDeleteCalled() {
         Log.w("ZOOM", "Delete")

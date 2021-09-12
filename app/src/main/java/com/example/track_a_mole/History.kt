@@ -58,7 +58,7 @@ class History : AppCompatActivity() {
         // Place first in case not loading any images
         var time:Long
 
-        //loading.visibility = View.GONE
+
         val storageRef = storage.reference
         db.collection("mole_photos").whereEqualTo("uid", uid).get()
             .addOnSuccessListener { documents ->

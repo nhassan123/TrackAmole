@@ -61,7 +61,7 @@ class MoleAdapter(private val nameSet: MutableList<String>) :
         viewHolder.textDisplay.text = "Mole name:"
         viewHolder.moleName = nameSet[position]
         viewHolder.unameDisplay.text = nameSet[position]
-        //viewHolder.locDisplay.setText(imgLocSet[position])
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)

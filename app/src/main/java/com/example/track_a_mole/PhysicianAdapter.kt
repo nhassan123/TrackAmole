@@ -33,10 +33,7 @@ class PhysicianAdapter(private val userSet: MutableList<String>, private val uid
                    "UID",
                     uid
                 )
-                //zoomIntent.putExtra(
-                //    "UID",
-                //   uid
-                //)
+
                 c.startActivity(zoomIntent)
             }
         }
@@ -58,7 +55,7 @@ class PhysicianAdapter(private val userSet: MutableList<String>, private val uid
         // contents of the view with that element
         viewHolder.uid = uidSet[position]
         viewHolder.unameDisplay.text = userSet[position]
-        //viewHolder.locDisplay.setText(imgLocSet[position])
+
     }
 
     // Return the size of your dataset (invoked by the layout manager)

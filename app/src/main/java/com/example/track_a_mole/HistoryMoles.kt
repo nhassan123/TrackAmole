@@ -60,9 +60,6 @@ class HistoryMoles : AppCompatActivity() {
             }
             adapter.notifyDataSetChanged()
 
-            // Solve the race condition by waiting for each one
-            // This is not ideal but should be ok for this type of scale
-            //loading.visibility = View.GONE
         }
 
     }

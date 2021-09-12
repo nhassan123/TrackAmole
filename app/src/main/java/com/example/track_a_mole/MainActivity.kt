@@ -206,11 +206,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(exitIntent)
     }
 
-    private fun onGlobal() {
-        val globalIntent = Intent(this, GlobalFeed::class.java)
-        startActivity(globalIntent)
-    }
-
     private fun onSendData() {
         val sendIntent = Intent(this, SendData::class.java)
         startActivity(sendIntent)

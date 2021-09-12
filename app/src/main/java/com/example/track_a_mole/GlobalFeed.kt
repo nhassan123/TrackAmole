@@ -17,6 +17,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
 
 class GlobalFeed : AppCompatActivity() {
+    // This class isn't being used as of now
     private lateinit var loading: ProgressBar
     private val storage: FirebaseStorage = Firebase.storage
     

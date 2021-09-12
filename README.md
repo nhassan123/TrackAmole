@@ -1,5 +1,9 @@
 # ECE 1778 Track-A-Mole Project
 
+<p align="center">
+  <img src="pictures/mole.png" width="350" title="App logo">
+</p>
+
 The purpose of this Android application is to allow users to record and keep track of their moles. The application also uses OpenCV, an open source library for computer vision, to auto-generate some properties of the mole like it's size and whether or not it is symmetric. 
 
 ## User Guide

@@ -47,17 +47,6 @@ class MoleTransit : AppCompatActivity() {
         //viewpager.autoScroll(2000)
 
 
-
-//        val extras: Bundle? = intent.extras
-//        if (extras != null) {
-//            if (!intent.hasExtra("MOLE_NAME")) {
-//                Log.w("ZOOM", "NO UID")
-//            }
-//            moleID = extras.get("example") as String
-//            Log.d("TRANSITON", moleID)
-//        }
-
-
         val storageRef = storage.reference
         db.collection("mole_photos").whereEqualTo("uid", uid).whereEqualTo("uniqueName", moleID).get()
             .addOnSuccessListener { documents ->
@@ -86,14 +75,6 @@ class MoleTransit : AppCompatActivity() {
                         //loading.visibility = View.GONE
                     }
                 }
-//                if(imgList.isNotEmpty()){
-//                    var adapter: PagerAdapter = SliderAdapter(applicationContext, images, imgList)
-//                    var viewpager: ViewPager = findViewById(R.id.viewPager)
-//                    Log.d("TRANSITON", moleID)
-//                    viewpager.adapter = adapter
-//                    viewpager.autoScroll(2000)
-//                }
-
 
             }
             .addOnFailureListener {
