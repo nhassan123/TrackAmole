@@ -39,4 +39,4 @@ A physician code can also be entered that allows users to share their recorded m
 After you clone the repo, open the folder using Android Studio. 
 Run the application by going to Run -> Run 'app'. The application can be run through an emulator or you can also plug in your android device.
 
-For more details and the full report, <href="https://www.eecg.utoronto.ca/~jayar/ece1778/download/trackamole.pdf"> click here</href>. 
+For more details and the full report, <a href="https://www.eecg.utoronto.ca/~jayar/ece1778/download/trackamole.pdf"> click here</a>. 
